@@ -7,6 +7,7 @@ This is a small C library that can be used to read GIF files.
   * other extensions may be easily supported via user hooks
   * small and portable: less than 500 lines of C99
   * public domain
+  * CMake integration
 
 
 ## Limitations
