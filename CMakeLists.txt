@@ -10,6 +10,11 @@ add_library(gifdec gifdec.c)
 target_include_directories(gifdec PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
   $<INSTALL_INTERFACE:include>)
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+  target_compile_options(gifdec PRIVATE -O3)
+else()
+  target_compile_options(gifdec PRIVATE -O0 -g)
+endif()
 
 if(GD_BUILD_EXAMPLE)
     add_executable(example example.c)
