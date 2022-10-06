@@ -8,7 +8,7 @@ option(GD_BUILD_EXAMPLE "Build example" OFF)
 ########## Build instructions                     ##############################
 add_library(gifdec gifdec.c)
 target_include_directories(gifdec PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}>
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
   $<INSTALL_INTERFACE:include>)
 
 if(GD_BUILD_EXAMPLE)
